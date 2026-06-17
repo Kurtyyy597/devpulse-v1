@@ -1,12 +1,12 @@
 import { api } from "./axios";
 import type { Session } from "../../../shared/types/sessions";
 import type { CreateSessionFormInput,
-} from "../../../shared/types/forms/CreateSessionForm";
+} from "../types/CreateSessionForm";
 import type { ApiResponse } from "../../../shared/types/integration/GetApiResponse";
 import type { FilterSessions } from "../../../shared/types/filterSessions";
 import type { GetApiResponse } from "../../../shared/types/integration/GetApiResponse";
 import type { DashboardSession } from "../../../shared/types/DashboardSession";
-import type { UpdateSessionFormInput } from "../../../shared/types/forms/UpdateSessionForm";
+import type { UpdateSessionFormInput } from "../types/UpdateSessionForm";
 
 export const getAllSessions = async (
   filters: FilterSessions,
