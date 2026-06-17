@@ -8,10 +8,6 @@
     "rootDir": "..",
     "outDir": "./dist",
 
-    "paths": {
-      "@shared/*": ["../shared/*"]
-    },
-
     "lib": ["ES2020"],
     "types": ["node"],
 
@@ -33,8 +29,9 @@
     "../shared/const",
     "../shared/data",
     "../shared/helper-functions",
-    "../shared/errors"
-, "../shared/schemas/updateSessionSchema.ts"  ],
+    "../shared/errors",
+    "../shared/schemas"
+  ],
 
   "exclude": [
     "node_modules",

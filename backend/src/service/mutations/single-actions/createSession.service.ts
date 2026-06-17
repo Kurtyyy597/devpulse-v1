@@ -2,7 +2,7 @@ import type { CreateSessionForm } from "../../../../../shared/types/forms/Create
 import type { Session } from "../../../../../shared/types/sessions";
 import { isValidInitialStatus } from "../../service-helpers/isStatusValidDefault";
 import { AppError } from "../../../../../shared/errors/appError";
-import { validateSkills } from "../../service-helpers/validateSkills";
+import { validateSkills } from "../../service-helpers/validateSkills";        
 import { throwIfSameSessionCreated } from "../../service-helpers/throwIfSameSession";
 
 export const createSessionService = async (
