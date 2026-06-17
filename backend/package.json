@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "ts-node-dev -r tsconfig-paths/register src/server.ts",
     "build": "tsc",
-    "start": "node dist/server.ts"
+    "start": "node dist/backend/src/server.js"
   },
   "keywords": [],
   "author": "",
