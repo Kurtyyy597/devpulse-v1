@@ -1,8 +1,8 @@
 import "./FormSessionsComponent.css";
-import type {CreateSessionFormInput} from "../../../types/CreateSessionForm";
+import type {CreateSessionFormInput} from "../../../../../shared/types/forms/CreateSessionForm";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm, useWatch } from "react-hook-form";
-import { createSessionSchema } from "../../../../../backend/src/schemas/forms/createSessionSchemas";
+import { createSessionSchema } from "../../../../../shared/schemas/createSessionSchemas";
 import FormGroup from "../form-group/FormGroup";
 import { searchTechnologies } from "../../../../../shared/helper-functions/technologies/searchTechnologies";
 import { technologies } from "../../../../../shared/data/technologies";
@@ -12,7 +12,7 @@ import { statuses } from "../../../../../shared/types/SessionStatus";
 import { moods } from "../../../../../shared/types/Mood";
 import "./FormSessionsComponent.css";
 import axios from "axios";
-import type { SessionFormInput } from "../../../types/SessionFormInput";
+import type { SessionFormInput } from "../../../../../shared/types/forms/SessionFormInput";
 import { Link } from "react-router-dom";
 
 

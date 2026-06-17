@@ -3,7 +3,7 @@ import { useNavigate, useParams } from "react-router-dom";
 import { useUpdateSession } from "../../../hooks/mutation/single-actions/useUpdateSession";
 import { toast } from "react-toastify";
 import { useSession } from "../../../hooks/queries/useSession";
-import type { UpdateSessionFormInput } from "../../../types/UpdateSessionForm";
+import type { UpdateSessionFormInput } from "../../../../../shared/types/forms/UpdateSessionForm";
 
 
 function UpdateSessionPage() {
