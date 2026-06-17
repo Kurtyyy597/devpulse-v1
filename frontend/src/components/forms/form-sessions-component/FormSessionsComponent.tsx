@@ -73,7 +73,7 @@ export default function FormsSessionComponent({
     const normalizedValues = normalizeText(value);
 
     const existingSkills = selectedSkills.some(
-      (skill) => normalizeText(skill) === normalizedValues,
+      (skill: string) => normalizeText(skill) === normalizedValues,
     );
 
     if (existingSkills) {
@@ -93,7 +93,7 @@ export default function FormsSessionComponent({
   const removeSkill = (skillToRemove: string) => {
     setValue(
       "skills",
-      selectedSkills.filter((skill) => skill !== skillToRemove),
+      selectedSkills.filter((skill: string) => skill !== skillToRemove),
       {
         shouldDirty: true,
         shouldValidate: true,
@@ -286,7 +286,7 @@ export default function FormsSessionComponent({
 
             {/* Selected Skills */}
             <div className="selected-skills">
-              {selectedSkills.map((s) => (
+              {selectedSkills.map((s: string) => (
                 <div key={s} className="selected-skill-chip">
                   <span className="selected"> {s} </span>
                   <button
