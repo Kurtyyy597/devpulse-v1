@@ -1,4 +1,4 @@
-import type { CreateSessionForm } from "../../../../../shared/types/forms/CreateSessionForm";
+import type { CreateSessionForm } from "../../../types/forms/CreateSessionForm";
 import type { Session } from "../../../../../shared/types/sessions";
 import { isValidInitialStatus } from "../../service-helpers/isStatusValidDefault";
 import { AppError } from "../../../../../shared/errors/appError";

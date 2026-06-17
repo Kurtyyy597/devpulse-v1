@@ -1,4 +1,4 @@
-import type { CreateSessionForm } from "../../../../shared/types/forms/CreateSessionForm";
+import type { CreateSessionForm } from "../../types/forms/CreateSessionForm";
 import type { SessionStatus } from "../../../../shared/types/SessionStatus";
 
 export const validStatuses: SessionStatus[] = ["planned", "open"];

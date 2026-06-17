@@ -6,8 +6,8 @@ import { softDeleteSessionService } from "../service/mutations/single-actions/so
 import { archiveSessionService } from "../service/mutations/single-actions/archiveSession.service";
 import { restoreArchivedSessionService } from "../service/mutations/single-actions/restoreArchivedSession.service";
 import { restoreDeletedSessionService } from "../service/mutations/single-actions/restoreDeletedSession.service";
-import type { CreateSessionForm } from "../../../shared/types/forms/CreateSessionForm";
-import type { UpdateSessionForm } from "../../../shared/types/forms/UpdateSessionForm";
+import type { CreateSessionForm } from "../types/forms/CreateSessionForm";
+import type { UpdateSessionForm } from "../types/forms/UpdateSessionForm";
 import { Request, Response } from "express";
 import { parseSessionQuery } from "../../../shared/helper-functions/filter/getParseFilter";
 import type { Session } from "../../../shared/types/sessions";
