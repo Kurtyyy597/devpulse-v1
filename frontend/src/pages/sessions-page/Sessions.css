@@ -1,0 +1,303 @@
+.session-page-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1rem;
+
+  color: var(--text-primary);
+}
+
+/* =========================
+   STATES
+========================= */
+
+.loading,
+.error,
+.error-filter {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  min-height: 200px;
+
+  padding: 1rem;
+  border-radius: 12px;
+
+  background: var(--card-bg);
+  border: 1px solid var(--border-color);
+
+  color: var(--text-secondary);
+  text-align: center;
+}
+
+.error-filter {
+  color: var(--warning);
+}
+
+/* =========================
+   EMPTY STATE
+========================= */
+
+.empty-sessions {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+
+  padding: 3rem 1.5rem;
+
+  background: var(--card-bg);
+  border: 1px solid var(--border-color);
+  border-radius: 16px;
+
+  box-shadow: var(--shadow-sm);
+
+  text-align: center;
+}
+
+.empty-text {
+  color: var(--text-secondary);
+  font-size: 1rem;
+}
+
+.empty-sessions a {
+  padding: 0.75rem 1.25rem;
+
+  background: var(--primary);
+  color: white;
+
+  border-radius: 10px;
+
+  transition: background-color 0.2s ease;
+}
+
+.empty-sessions a:hover {
+  background: var(--primary-hover);
+}
+
+/* =========================
+   BULK ACTIONS
+========================= */
+
+.bulk-actions-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+
+  padding: 1rem;
+
+  background: var(--card-bg);
+  border: 1px solid var(--border-color);
+  border-radius: 14px;
+
+  box-shadow: var(--shadow-sm);
+}
+
+.session-length {
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+}
+
+.session-length strong {
+  color: var(--text-primary);
+}
+
+/* =========================
+   ACTION BUTTONS
+========================= */
+
+.btn-actions {
+  display: flex;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+}
+
+.btn-actions button {
+  padding: 0.7rem 1rem;
+
+  border-radius: 10px;
+
+  font-weight: 600;
+  font-size: 0.9rem;
+
+  transition:
+    background-color 0.2s ease,
+    transform 0.15s ease,
+    opacity 0.2s ease;
+}
+
+.btn-actions button:hover:not(:disabled) {
+  transform: translateY(-1px);
+}
+
+.btn-actions button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.btn-archive {
+  background: var(--warning);
+  color: white;
+}
+
+.btn-soft-delete {
+  background: var(--danger);
+  color: white;
+}
+
+.btn-restore-archive {
+  background: var(--success);
+  color: white;
+}
+
+/* =========================
+   TOASTS
+========================= */
+
+.toast,
+.success {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.toast a,
+.undo-archive,
+.undo-deleted,
+.btn-undo-restore {
+  color: var(--primary);
+  font-weight: 600;
+}
+
+.undo-archive,
+.undo-deleted,
+.btn-undo-restore {
+  padding: 0.25rem 0.5rem;
+}
+
+.success-text {
+  color: var(--text-primary);
+}
+
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 768px) {
+  .bulk-actions-container {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .btn-actions {
+    width: 100%;
+  }
+
+  .btn-actions button {
+    flex: 1;
+    min-width: 140px;
+  }
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 480px) {
+  .session-page-wrapper {
+    padding: 0.75rem;
+  }
+
+  .btn-actions {
+    flex-direction: column;
+  }
+
+  .btn-actions button {
+    width: 100%;
+  }
+
+  .session-length {
+    text-align: center;
+  }
+
+  .toast,
+  .success {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+.session-page-top {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  padding: 1rem;
+  margin-bottom: 1rem;
+}
+
+.pallete {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 0.75rem 1rem;
+
+  background-color: var(--bg-secondary);
+  color: var(--text-secondary);
+
+  border: 1px solid var(--border-color);
+  border-radius: 999px;
+
+  font-size: 0.875rem;
+  font-weight: 500;
+  text-align: center;
+
+  box-shadow: var(--shadow-sm);
+  transition:
+    background-color 0.2s ease,
+    border-color 0.2s ease,
+    color 0.2s ease,
+    transform 0.2s ease;
+}
+
+.pallete:hover {
+  background-color: var(--bg-tertiary);
+  transform: translateY(-1px);
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .session-page-top {
+    padding: 0.75rem;
+  }
+
+  .pallete {
+    width: 100%;
+
+    padding: 0.875rem;
+
+    font-size: 0.8125rem;
+    line-height: 1.4;
+  }
+}
+
+.pallete kbd {
+  padding: 0.15rem 0.45rem;
+
+  background-color: var(--card-bg);
+  color: var(--text-primary);
+
+  border: 1px solid var(--border-color);
+  border-radius: 6px;
+
+  font-size: 0.75rem;
+  font-weight: 600;
+
+  box-shadow: var(--shadow-sm);
+}

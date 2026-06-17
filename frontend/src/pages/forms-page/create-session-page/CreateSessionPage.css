@@ -1,0 +1,36 @@
+.success {
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+
+  color: var(--success);
+
+  font-size: 0.95rem;
+  font-weight: 500;
+}
+
+.success-title {
+  color: var(--text-primary);
+  font-weight: 700;
+
+  max-width: 180px;
+
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* ==========================
+   MOBILE
+========================== */
+
+@media (max-width: 480px) {
+  .success {
+    font-size: 0.9rem;
+    flex-wrap: wrap;
+  }
+
+  .success-title {
+    max-width: 120px;
+  }
+}

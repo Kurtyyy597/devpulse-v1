@@ -1,0 +1,58 @@
+/* ========================================
+   FILTER GROUP COMPONENT
+======================================== */
+
+.filter-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+
+  width: 100%;
+}
+
+/* ========================================
+   LABEL
+======================================== */
+
+.filter-group-label {
+  color: var(--text-secondary);
+
+  font-size: 0.9rem;
+  font-weight: 600;
+
+  letter-spacing: 0.02em;
+}
+
+/* ========================================
+   CHILD INPUTS
+======================================== */
+
+.filter-group input,
+.filter-group select,
+.filter-group textarea {
+  width: 100%;
+}
+
+/* ========================================
+   TABLET
+======================================== */
+
+@media (max-width: 768px) {
+  .filter-group-label {
+    font-size: 0.875rem;
+  }
+}
+
+/* ========================================
+   MOBILE
+======================================== */
+
+@media (max-width: 480px) {
+  .filter-group {
+    gap: 0.4rem;
+  }
+
+  .filter-group-label {
+    font-size: 0.85rem;
+  }
+}

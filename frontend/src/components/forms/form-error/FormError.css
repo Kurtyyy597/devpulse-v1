@@ -1,0 +1,40 @@
+/* ========================================
+   FORM ERROR
+======================================== */
+
+.form-error {
+  margin-top: 0.25rem;
+}
+
+.form-error-text {
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+
+  color: var(--danger);
+
+  font-size: 0.875rem;
+  font-weight: 500;
+  line-height: 1.4;
+}
+
+/* ========================================
+   TABLET
+======================================== */
+
+@media (max-width: 768px) {
+  .form-error-text {
+    font-size: 0.85rem;
+  }
+}
+
+/* ========================================
+   MOBILE
+======================================== */
+
+@media (max-width: 480px) {
+  .form-error-text {
+    font-size: 0.8rem;
+    line-height: 1.5;
+  }
+}

@@ -1,0 +1,157 @@
+/* ========================================
+   PAGINATION
+======================================== */
+
+.pagination-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+
+  gap: 0.5rem;
+
+  margin-top: 2rem;
+}
+
+/* ========================================
+   BUTTONS
+======================================== */
+
+.btn-prev,
+.btn-next,
+.pagination-page {
+  min-width: 42px;
+
+  padding: 0.65rem 0.9rem;
+
+  background-color: var(--card-bg);
+  color: var(--text-primary);
+
+  border: 1px solid var(--border-color);
+  border-radius: 0.5rem;
+
+  font-weight: 500;
+
+  transition:
+    background-color 0.2s ease,
+    border-color 0.2s ease,
+    transform 0.2s ease;
+}
+
+.btn-prev:hover:not(:disabled),
+.btn-next:hover:not(:disabled),
+.pagination-page:hover {
+  background-color: var(--bg-secondary);
+
+  border-color: var(--primary);
+}
+
+.btn-prev:active:not(:disabled),
+.btn-next:active:not(:disabled),
+.pagination-page:active {
+  transform: scale(0.98);
+}
+
+/* ========================================
+   ACTIVE PAGE
+======================================== */
+
+.pagination-page.active {
+  background-color: var(--primary);
+  color: white;
+
+  border-color: var(--primary);
+}
+
+.pagination-page.active:hover {
+  background-color: var(--primary-hover);
+}
+
+/* ========================================
+   DISABLED
+======================================== */
+
+.btn-prev:disabled,
+.btn-next:disabled {
+  cursor: not-allowed;
+
+  opacity: 0.5;
+}
+
+/* ========================================
+   ELLIPSIS
+======================================== */
+
+.pagination-ellipsis {
+  padding: 0 0.25rem;
+
+  color: var(--text-muted);
+
+  font-weight: 600;
+}
+
+/* ========================================
+   PAGE INFO
+======================================== */
+
+.length {
+  width: 100%;
+
+  margin-top: 0.75rem;
+
+  text-align: center;
+}
+
+.length-text {
+  color: var(--text-secondary);
+
+  font-size: 0.9rem;
+}
+
+.length-text strong {
+  color: var(--text-primary);
+}
+
+/* ========================================
+   TABLET
+======================================== */
+
+@media (max-width: 768px) {
+  .pagination-wrapper {
+    gap: 0.4rem;
+  }
+
+  .btn-prev,
+  .btn-next,
+  .pagination-page {
+    min-width: 38px;
+
+    padding: 0.6rem 0.8rem;
+
+    font-size: 0.9rem;
+  }
+}
+
+/* ========================================
+   MOBILE
+======================================== */
+
+@media (max-width: 480px) {
+  .pagination-wrapper {
+    gap: 0.35rem;
+  }
+
+  .btn-prev,
+  .btn-next,
+  .pagination-page {
+    min-width: 36px;
+
+    padding: 0.55rem 0.7rem;
+
+    font-size: 0.85rem;
+  }
+
+  .length-text {
+    font-size: 0.85rem;
+  }
+}

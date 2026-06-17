@@ -1,16 +1,49 @@
+/* ========================================
+   APP LAYOUT
+======================================== */
+
 .app-wrapper {
   min-height: 100vh;
 
   display: flex;
   flex-direction: column;
 
-  background: #f8fafc;
+  background-color: var(--bg-primary);
 }
 
-.app-content {
+/* ========================================
+   MAIN CONTENT
+======================================== */
+
+.main-content {
   flex: 1;
 
   width: 100%;
+  max-width: 1400px;
 
-  padding: 1rem;
+  margin: 0 auto;
+  padding: 1.5rem;
+
+  display: flex;
+  flex-direction: column;
+}
+
+/* ========================================
+   TABLET
+======================================== */
+
+@media (max-width: 768px) {
+  .main-content {
+    padding: 1.25rem;
+  }
+}
+
+/* ========================================
+   MOBILE
+======================================== */
+
+@media (max-width: 480px) {
+  .main-content {
+    padding: 1rem;
+  }
 }

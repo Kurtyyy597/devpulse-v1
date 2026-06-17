@@ -1,0 +1,328 @@
+/* ========================================
+   FILTER COMPONENT
+======================================== */
+
+.filter-component-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+/* ========================================
+   HEADER
+======================================== */
+
+.filter-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.filter-header-title {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.filter-title {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  line-height: 1.2;
+}
+
+.filter-title-sub {
+  font-size: 0.95rem;
+  color: var(--text-secondary);
+  line-height: 1.5;
+}
+
+/* ========================================
+   CREATE BUTTON
+======================================== */
+
+.link-to-create a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 10px;
+  background-color: var(--primary);
+  color: white;
+
+  border-radius: 0.75rem;
+
+  box-shadow: var(--shadow-sm);
+
+  transition:
+    background-color 0.2s ease,
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.link-to-create a:hover {
+  background-color: var(--primary-hover);
+  box-shadow: var(--shadow-md);
+}
+
+.link-to-create a:active {
+  transform: scale(0.97);
+}
+
+/* ========================================
+   SEARCH
+======================================== */
+
+.filter-search-container {
+  width: 100%;
+}
+
+.input {
+  width: 100%;
+  padding: 0.875rem 1rem;
+
+  background-color: var(--card-bg);
+  color: var(--text-primary);
+
+  border: 1px solid var(--border-color);
+  border-radius: 0.75rem;
+
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.input::placeholder {
+  color: var(--text-muted);
+}
+
+.input:focus {
+  outline: none;
+  border-color: var(--primary);
+  box-shadow: var(--shadow-sm);
+}
+
+/* ========================================
+   FILTERS
+======================================== */
+
+.filter-container {
+  width: 100%;
+}
+
+.filter-card {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+
+  padding: 1.25rem;
+
+  background-color: var(--card-bg);
+
+  border: 1px solid var(--border-color);
+  border-radius: 1rem;
+
+  box-shadow: var(--shadow-sm);
+}
+
+.select {
+  width: 100%;
+  padding: 0.875rem 1rem;
+
+  background-color: var(--card-bg);
+  color: var(--text-primary);
+
+  border: 1px solid var(--border-color);
+  border-radius: 0.75rem;
+
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.select:focus {
+  outline: none;
+  border-color: var(--primary);
+  box-shadow: var(--shadow-sm);
+}
+
+/* ========================================
+   ACTIVE FILTERS
+======================================== */
+
+.active-filters-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+
+  padding: 1.25rem;
+
+  background-color: var(--card-bg);
+
+  border: 1px solid var(--border-color);
+  border-radius: 1rem;
+
+  box-shadow: var(--shadow-sm);
+}
+
+.active-filters-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.active-filter-text {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.btn-reset {
+  padding: 0.6rem 1rem;
+
+  background-color: transparent;
+  color: var(--danger);
+
+  border: 1px solid var(--danger);
+  border-radius: 0.75rem;
+
+  font-size: 0.875rem;
+  font-weight: 600;
+
+  transition:
+    background-color 0.2s ease,
+    color 0.2s ease,
+    transform 0.2s ease;
+}
+
+.btn-reset:hover {
+  background-color: var(--danger);
+  color: white;
+}
+
+.btn-reset:active {
+  transform: scale(0.98);
+}
+
+/* ========================================
+   FILTER CHIPS
+======================================== */
+
+.filter-chip-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.filter-chip {
+  padding: 0.5rem 0.875rem;
+
+  background-color: var(--bg-tertiary);
+  color: var(--text-primary);
+
+  border: 1px solid var(--border-color);
+  border-radius: 999px;
+
+  font-size: 0.85rem;
+  font-weight: 500;
+}
+
+/* ========================================
+   TABLET
+======================================== */
+
+@media (max-width: 768px) {
+  .filter-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .filter-title {
+    font-size: 1.75rem;
+  }
+
+  .filter-card {
+    grid-template-columns: 1fr;
+  }
+
+  .active-filters-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .btn-reset {
+    width: 100%;
+  }
+}
+
+/* ========================================
+   MOBILE
+======================================== */
+
+@media (max-width: 480px) {
+  .filter-component-wrapper {
+    gap: 1rem;
+  }
+
+  .filter-header {
+    flex-direction: row;
+    align-items: flex-start;
+  }
+
+  .filter-title {
+    font-size: 1.5rem;
+  }
+
+  .filter-title-sub {
+    font-size: 0.875rem;
+  }
+
+  .filter-card,
+  .active-filters-container {
+    padding: 1rem;
+  }
+
+  .input,
+  .select {
+    padding: 0.8rem;
+    font-size: 0.95rem;
+  }
+
+  .link-to-create a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 0.75rem 1rem;
+  min-height: 44px;
+
+  background-color: var(--primary);
+  color: white;
+
+  border-radius: 0.75rem;
+
+  font-size: 0.95rem;
+  font-weight: 600;
+
+  white-space: nowrap;
+
+  box-shadow: var(--shadow-sm);
+
+  transition:
+    background-color 0.2s ease,
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+  .filter-chip-container {
+    gap: 0.5rem;
+  }
+
+  .filter-chip {
+    width: 100%;
+    text-align: center;
+    border-radius: 0.75rem;
+  }
+}

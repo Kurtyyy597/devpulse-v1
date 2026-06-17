@@ -1,0 +1,340 @@
+/* ========================================
+   DASHBOARD LAYOUT
+======================================== */
+
+.dashboard-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+
+  padding: 2rem;
+
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+}
+
+/* ========================================
+   HEADER
+======================================== */
+
+.dashboard-header-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2rem;
+
+  padding: 1.5rem;
+
+  background-color: var(--card-bg);
+
+  border: 1px solid var(--border-color);
+  border-radius: 1rem;
+
+  box-shadow: var(--shadow-sm);
+}
+
+.dashboard-header-top {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.dashboard-title {
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.dashboard-title strong {
+  color: var(--primary);
+}
+
+.dashboard-title-sub {
+  color: var(--text-secondary);
+}
+
+.track,
+.performance {
+  color: var(--primary);
+}
+
+.header-progress-container {
+  min-width: 280px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.overall-progress {
+  font-size: 0.95rem;
+  color: var(--text-secondary);
+}
+
+.progress-fill {
+  height: 12px;
+
+  background-color: var(--primary);
+
+  border-radius: 999px;
+
+  transition: width 0.3s ease;
+}
+
+.progress-percentrage {
+  font-size: 1rem;
+  color: var(--text-primary);
+}
+
+/* ========================================
+   KPI SECTION
+======================================== */
+
+.stats-grid-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+
+/* ========================================
+   ANALYTICS
+======================================== */
+
+.analytics-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+}
+
+.chart-card {
+  padding: 1.5rem;
+
+  background-color: var(--card-bg);
+
+  border: 1px solid var(--border-color);
+  border-radius: 1rem;
+
+  box-shadow: var(--shadow-sm);
+}
+
+.chart-card h2 {
+  margin-bottom: 1rem;
+
+  font-size: 1.25rem;
+  color: var(--text-primary);
+}
+
+/* ========================================
+   RECENT SESSIONS
+======================================== */
+
+/* =========================================
+   RECENT SESSIONS
+========================================= */
+
+.recent-session {
+  margin-top: 1.5rem;
+}
+
+.session-length {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+  margin-bottom: 1rem;
+  color: var(--text-primary);
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+
+.session-count {
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--text-secondary);
+}
+
+.empty-state {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  min-height: 220px;
+  padding: 2rem;
+  text-align: center;
+
+  background: var(--card-bg);
+  border: 1px solid var(--border-color);
+  border-radius: 1rem;
+}
+
+.empty-text {
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+}
+
+.empty-state a {
+  color: var(--accent-color);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.empty-state a:hover {
+  text-decoration: underline;
+}
+
+.recent-session-grid {
+  display: grid;
+  gap: 1rem;
+}
+
+.recent-session-card {
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.recent-session-card:hover {
+  transform: translateY(-2px);
+}
+
+/* Tablet */
+@media (max-width: 768px) {
+  .session-length {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .session-count {
+    font-size: 0.8rem;
+  }
+}
+
+/* Mobile */
+@media (max-width: 480px) {
+  .recent-session {
+    margin-top: 1rem;
+  }
+
+  .session-length {
+    font-size: 1.1rem;
+  }
+
+  .empty-state {
+    min-height: 180px;
+    padding: 1.25rem;
+  }
+}
+
+/* ========================================
+   RECHARTS THEME
+======================================== */
+
+.recharts-cartesian-grid line {
+  stroke: var(--border-color);
+}
+
+.recharts-text {
+  fill: var(--text-secondary);
+}
+
+.recharts-default-tooltip {
+  border: 1px solid var(--border-color) !important;
+  border-radius: 0.5rem !important;
+
+  background-color: var(--card-bg) !important;
+}
+
+.recharts-legend-item-text {
+  color: var(--text-primary) !important;
+}
+
+/* ========================================
+   TABLET
+======================================== */
+
+@media (max-width: 768px) {
+  .dashboard-wrapper {
+    padding: 1.5rem;
+  }
+
+  .dashboard-header-section {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .header-progress-container {
+    min-width: unset;
+    width: 100%;
+  }
+
+  .stats-grid-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .analytics-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .section-card {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* ========================================
+   MOBILE
+======================================== */
+
+@media (max-width: 480px) {
+  .dashboard-wrapper {
+    padding: 1rem;
+    gap: 1.5rem;
+  }
+
+  .dashboard-header-section {
+    padding: 1rem;
+  }
+
+  .dashboard-title {
+    font-size: 1.6rem;
+  }
+
+  .stats-grid-container {
+    grid-template-columns: 1fr;
+  }
+
+  .analytics-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .chart-card {
+    padding: 1rem;
+  }
+
+  .section-card {
+    grid-template-columns: 1fr;
+    padding: 1rem;
+  }
+
+  .empty-state {
+    padding: 2rem 1rem;
+  }
+}
+
+.session-length {
+  margin-bottom: 1rem;
+
+  color: var(--text-primary);
+
+  font-size: 1.25rem;
+  font-weight: 700;
+  letter-spacing: -0.025em;
+
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.session-count {
+  color: var(--primary);
+  font-weight: 800;
+}

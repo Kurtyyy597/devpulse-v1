@@ -1,29 +1,29 @@
-import { Routes, Route } from "react-router-dom";
-
+import Sessions from "./pages/sessions-page/Sessions";
+import DashboardPage from "./pages/dashboard-page/Dashboard";
+import ViewSession from "./pages/view-session-details-page/ViewSession";
+import CreateSessionPage from "./pages/forms-page/create-session-page/CreateSessionPage";
+import UpdateSessionPage from "./pages/forms-page/update-session-page/UpdateSessionPage";
 import { ToastContainer } from "react-toastify";
-import "../src/App.css"
-import "react-toastify/dist/ReactToastify.css";
-
 import NavbarComponent from "./components/navbar-component/NavbarComponent";
-
-import HomePage from "./pages/home-page/HomePage";
-import CreateTaskPage from "./pages/create-task-page/CreateTaskPage";
-import EditTaskPage from "./pages/edit-task-page/EditTaskPage";
-
+import { Route, Routes } from "react-router-dom";
+import { useTheme } from "./context/theme/useTheme";
+import Trash from "./pages/trashbin-page/Trash";
 import "./App.css";
 
 export default function App() {
+  const { theme } = useTheme();
   return (
     <div className="app-wrapper">
       <NavbarComponent />
 
-      <main className="app-content">
+      <main className="main-content">
         <Routes>
-          <Route path="/" element={<HomePage />} />
-
-          <Route path="/tasks/create" element={<CreateTaskPage />} />
-
-          <Route path="/tasks/edit/:id" element={<EditTaskPage />} />
+          <Route path="/" element={<DashboardPage />} />
+          <Route path="/sessions" element={<Sessions />} />
+          <Route path="sessions/trash" element={<Trash/>}/>
+          <Route path="/sessions/:id" element={<ViewSession />} />
+          <Route path="/sessions/create" element={<CreateSessionPage />} />
+          <Route path="sessions/update/:id" element={<UpdateSessionPage />} />
         </Routes>
       </main>
 
@@ -33,7 +33,7 @@ export default function App() {
         pauseOnHover
         draggable
         newestOnTop
-        theme="light"
+        theme={theme}
       />
     </div>
   );

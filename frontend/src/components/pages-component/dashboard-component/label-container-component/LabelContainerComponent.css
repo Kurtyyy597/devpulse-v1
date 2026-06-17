@@ -1,0 +1,70 @@
+.label-container-component {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+
+  width: 100%;
+}
+
+.label-container-label {
+  flex-shrink: 0;
+
+  color: var(--text-secondary);
+
+  font-size: 0.875rem;
+  font-weight: 600;
+}
+
+.label-container-label::after {
+  content: ":";
+  margin-right: 0.375rem;
+}
+
+.label-container-value {
+  color: var(--text-primary);
+
+  font-size: 0.875rem;
+  font-weight: 500;
+
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* ==========================
+   TABLET
+========================== */
+
+@media (max-width: 768px) {
+  .label-container-component {
+    gap: 0.25rem;
+  }
+
+  .label-container-label,
+  .label-container-value {
+    font-size: 0.85rem;
+  }
+}
+
+/* ==========================
+   MOBILE
+========================== */
+
+@media (max-width: 480px) {
+  .label-container-component {
+    flex-wrap: wrap;
+    gap: 0.25rem;
+  }
+
+  .label-container-label,
+  .label-container-value {
+    font-size: 0.8rem;
+  }
+
+  .label-container-value {
+    white-space: normal;
+    overflow: visible;
+    text-overflow: unset;
+    word-break: break-word;
+  }
+}
