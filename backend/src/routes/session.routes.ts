@@ -4,8 +4,8 @@ import { validate } from "../middleware/validate";
 import { sessionQuerySchema } from '../schemas/filters/sessionQuerySchema';
 import { bulkSessionIdSchemas } from './../schemas/session-ID/bulkSessionsIdSchema';
 import { sessionIdSchema } from "../schemas/session-ID/sessionIdSchema";
-import { createSessionSchema } from "../schemas/create-schema/createSessionSchemas";
-import { updateSessionSchema } from "../schemas/update-schema/updateSessionSchema";
+import {createSessionSchema} from "../../../shared/schemas/createSessionSchemas"
+import { updateSessionSchema } from "../../../shared/schemas/updateSessionSchema";
 
 const router = Router();
 

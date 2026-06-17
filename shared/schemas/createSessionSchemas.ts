@@ -1,6 +1,6 @@
 import { z } from "zod";
-import { statuses } from "../../../../shared/types/SessionStatus";
-import { moods } from "../../../../shared/types/Mood";
+import { statuses } from "../types/SessionStatus";
+import { moods } from "../types/Mood";
 
 export const createSessionSchema = z.object({
   title: z

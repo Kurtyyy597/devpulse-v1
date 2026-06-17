@@ -8,7 +8,7 @@ import { validateStatusTransition } from '../../service-helpers/isStatusValid';
 import { validateSkills } from '../../service-helpers/validateSkills';
 import type { Session } from '../../../../../shared/types/sessions';
 import { pushNewActivities } from '../../service-helpers/activities/pushNewActivities';
-import type { UpdateSessionForm } from '../../../types/forms/UpdateSessionForm';
+import type { UpdateSessionForm } from '../../../../../shared/types/forms/UpdateSessionForm';
 
 export const updateSessionService = async (
   id: string,

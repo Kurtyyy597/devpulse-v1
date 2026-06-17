@@ -34,7 +34,7 @@
     "../shared/data",
     "../shared/helper-functions",
     "../shared/errors"
-  ],
+, "../shared/schemas/updateSessionSchema.ts"  ],
 
   "exclude": [
     "node_modules",

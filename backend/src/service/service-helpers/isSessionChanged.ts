@@ -1,5 +1,5 @@
 import type { Session } from "../../../../shared/types/sessions";
-import type { UpdateSessionForm } from "../../types/forms/UpdateSessionForm";
+import type { UpdateSessionForm } from "../../../../shared/types/forms/UpdateSessionForm";
 
 import { normalizeText } from "../../../../shared/helper-functions/normalizedText/normalizeText";
 

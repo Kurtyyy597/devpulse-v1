@@ -1,5 +1,5 @@
 import { z } from "zod";
-import { createSessionSchema } from "../../schemas/create-schema/createSessionSchemas";
+import { createSessionSchema } from "../../schemas/createSessionSchemas";
 
 export type CreateSessionFormInput = z.input<typeof createSessionSchema>;
 
