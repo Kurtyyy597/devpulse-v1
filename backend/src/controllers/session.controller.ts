@@ -1,5 +1,4 @@
 import asyncHandler from "express-async-handler";
-
 import { getAllSessionsService } from "../service/queries/getAllSessions.service";
 import { getOneSessionService } from "../service/queries/getOneSession.service";
 import { updateSessionService } from "../service/mutations/single-actions/updateSession.service";

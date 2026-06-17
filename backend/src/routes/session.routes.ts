@@ -1,11 +1,11 @@
-import { bulkSessionIdSchemas } from './../schemas/session-ID/bulkSessionsIdSchema';
-import { updateSessionSchema } from "./../../../shared/types/forms/UpdateSessionForm";
 import * as sessionsController from "../controllers/session.controller";
 import { Router } from "express";
 import { validate } from "../middleware/validate";
-import { createSessionSchema } from "../schemas/forms/createSessionSchemas";
-import { sessionQuerySchema } from "../schemas/filters/sessionQuerySchema";
+import { sessionQuerySchema } from '../schemas/filters/sessionQuerySchema';
+import { bulkSessionIdSchemas } from './../schemas/session-ID/bulkSessionsIdSchema';
 import { sessionIdSchema } from "../schemas/session-ID/sessionIdSchema";
+import { createSessionSchema } from "../../../shared/schemas/createSessionSchemas";
+import { updateSessionSchema } from "../../../shared/schemas/updateSessionSchema";
 
 const router = Router();
 
