@@ -1,6 +1,6 @@
 import { useMutation, useQueryClient } from "@tanstack/react-query";
 import { updateSession } from "../../../api-service/sessionApi";
-import type { UpdateSessionFormInput } from "../../../../../backend/src/types/forms/UpdateSessionForm";
+import type { UpdateSessionFormInput } from "../../../../../shared/types/forms/UpdateSessionForm";
 
 export type UpdateSessionPayload = {
   id: string;

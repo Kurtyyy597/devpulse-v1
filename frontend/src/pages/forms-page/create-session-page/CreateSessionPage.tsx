@@ -1,4 +1,4 @@
-import type { CreateSessionFormInput } from "../../../../../backend/src/types/forms/CreateSessionForm";
+import type { CreateSessionFormInput } from "../../../../../shared/types/forms/CreateSessionForm";
 import FormsSessionComponent from "../../../components/forms/form-sessions-component/FormSessionsComponent";
 import { useCreateSession } from "../../../hooks/mutation/single-actions/useCreateSession";
 import { useNavigate } from "react-router-dom";

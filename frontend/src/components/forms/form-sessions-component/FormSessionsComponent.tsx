@@ -1,8 +1,8 @@
 import "./FormSessionsComponent.css";
-import type { CreateSessionFormInput } from "../../../../../backend/src/types/forms/CreateSessionForm";
+import type { CreateSessionFormInput } from "../../../../../shared/types/forms/CreateSessionForm";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm, useWatch } from "react-hook-form";
-import { createSessionSchema } from "../../../../../backend/src/schemas/create-schema/createSessionSchemas";
+import { createSessionSchema } from "../../../../../shared/schemas/createSessionSchemas";
 import FormGroup from "../form-group/FormGroup";
 import { searchTechnologies } from "../../../../../shared/helper-functions/technologies/searchTechnologies";
 import { technologies } from "../../../../../shared/data/technologies";
