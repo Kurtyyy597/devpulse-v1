@@ -19,7 +19,7 @@ import { restoreManyArchivedSessionsService } from "../service/mutations/bulk-ac
 import { softDeleteManySessionsService } from "../service/mutations/bulk-actions/softDeleteManySessions.service";
 import { restoreManySoftDeletedSessionsService } from "../service/mutations/bulk-actions/restoreManySoftDeletedSessions.service";
 import { permanentDeleteManySessionsService } from "../service/mutations/bulk-actions/permanentDeleteManySessions.service";
-import { parseSessionQuery } from "@devpulse/shared";
+import { parseSessionQuery } from "../../../shared/helper-functions/filter/getParseFilter";
 let sessions: Session[] = [];
 
 export const getAllSessionController = asyncHandler(

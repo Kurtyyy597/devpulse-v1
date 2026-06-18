@@ -24,14 +24,9 @@
   },
 
   "include": [
-    "src",
-    "../shared/types",
-    "../shared/const",
-    "../shared/data",
-    "../shared/helper-functions",
-    "../shared/errors",
-    "../shared/schemas"
-  ],
+  "src",
+  "../shared"
+],
 
   "exclude": [
     "node_modules",
